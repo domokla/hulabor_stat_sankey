@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
@@ -53,6 +45,8 @@ fig.update_layout(
         font_size=14,
     ),
     margin=dict(l=50, r=50, t=50, b=50),  # Margins around the plot
+    width=1200,  # Diagram width in pixels
+    height=800,  # Diagram height in pixels
 )
 
 # Show the diagram in the default browser
@@ -64,7 +58,13 @@ html_file_path = os.path.join('output', 'sankey_diagram.html')
 # Save the diagram as an HTML file
 fig.write_html(html_file_path)
 
+# Generate image file path
+image_file_path = os.path.join('output', 'sankey_diagram.png')
 
+# Save the diagram as an image file
+fig.write_image(image_file_path, format="png", engine="kaleido", scale=5)  # Scale set to 3 for higher resolution
+
+print(f"Sankey diagram saved as {image_file_path}")
 
 
 
