@@ -5,7 +5,7 @@ import plotly.io as pio
 import os
 
 # Change directory if necessary
-os.chdir("/Users/domokla/Library/Mobile Documents/com~apple~CloudDocs/Coursera/hulabor_stat_sankey")
+os.chdir("/path/your/folder/hulabor_stat_sankey")
 
 # Excel file reading
 excel_path = 'data/munka.xlsx'
